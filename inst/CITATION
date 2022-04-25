@@ -8,13 +8,13 @@ citEntry(entry = "Article",
   volume       = "40",
   number       = "9",
   pages        = "1--15",
-  url          = "http://www.jstatsoft.org/v40/i09/",
+  url          = "https://www.jstatsoft.org/index.php/jss/article/view/v040i09",
 
   textVersion  =
   paste("Ji-Ping Wang (2011).",
         "SPECIES: An R Package for Species Richness Estimation.",
         "Journal of Statistical Software, 40(9), 1-15.",
-        "URL http://www.jstatsoft.org/v40/i09/.")
+        "URL https://www.jstatsoft.org/index.php/jss/article/view/v040i09")
 )
 
 
