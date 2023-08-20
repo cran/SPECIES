@@ -88,7 +88,7 @@ SUBROUTINE PCGone(n,t,MLE,a_model,alpha,alphaK,p,pi,theta_threshold,noZeroP)
 
 
   IMPLICIT NONE
-  INTEGER t,alphaK,cumuless,i,k,noZeroP
+  INTEGER t,alphaK,i,k,noZeroP
   DOUBLE PRECISION p(10),pi(10),pistat(10),a_model, predict(alphaK+1)
   DOUBLE PRECISION boot(50),n(50),boot1(50),a
   DOUBLE PRECISION Etol, Gtol,gap,mle,theta_threshold

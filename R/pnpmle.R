@@ -180,12 +180,12 @@ bootPnpmle=function(p,pi,b,t,rep,conf){
 }
 
 #S3 method for on-screen plot
-print.pnpmleClass=function(results){ #results is  list of (MLE0,p,pi,noZeroP,dis)
-  if(results$dis==1){
+print.pnpmleClass=function(x,...){ #results is  list of (MLE0,p,pi,noZeroP,dis)
+  if(x$dis==1){
     cat("Method: Penalized NPMLE method by  Wang and Lindsay 2005.", "\n\n")
-    cat('        MLE=                               ', results$MLE0,"\n")
+    cat('        MLE=                               ', x$MLE0,"\n")
     cat('        Estimated zero-truncated Poisson mixture components:      ', "\n")
-    cat('        p=                                 ', results$p[1:results$noZeroP],"\n")
-    cat('        pi=                                ', results$pi[1:results$noZeroP],"\n\n")
+    cat('        p=                                 ', x$p[1:x$noZeroP],"\n")
+    cat('        pi=                                ', x$pi[1:x$noZeroP],"\n\n")
   }
 }

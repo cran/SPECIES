@@ -197,14 +197,14 @@ bootPCG= function(p,pi,b,t,rep,amodel0,alpha,conf){
 }
 
 ###s3 print method
-print.pcgClass=function(results){#results is  list of (MLE0,amodel0,alpha,p,pi,noZeroP,dis)
-  if(results$dis==1){
+print.pcgClass=function(x,...){#x is  list of (MLE0,amodel0,alpha,p,pi,noZeroP,dis)
+  if(x$dis==1){
     cat("Method: Poisson-Compound Gamma method by Wang 2010.", "\n")
-    cat("Alpha grid used:", results$alpha,".","\n\n")
-    cat('        MLE=                               ', results$MLE0,"\n")
-    cat('        Selected alpha model:              ', results$amodel0,"\n")
+    cat("Alpha grid used:", x$alpha,".","\n\n")
+    cat('        MLE=                               ', x$MLE0,"\n")
+    cat('        Selected alpha model:              ', x$amodel0,"\n")
     cat('        Estimated Gamma components:        ', "\n")
-    cat('        p=                                 ', results$p[1:results$noZeroP],"\n")
-    cat('        pi=                                ', results$pi[1:results$noZeroP],"\n\n")
+    cat('        p=                                 ', x$p[1:x$noZeroP],"\n")
+    cat('        pi=                                ', x$pi[1:x$noZeroP],"\n\n")
   }
 }

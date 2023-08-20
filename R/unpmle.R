@@ -257,20 +257,20 @@ bootUnpmle=function(p,pi,b,t,method,rep,conf){
 
 
 #S3 method for on-screen plot
-print.unpmleClass=function(results){ #results is  list of (MLE0,p,pi,noZeroP,dis,method)
-  if(results$dis==1){
+print.unpmleClass=function(x,...){ #x is  list of (MLE0,p,pi,noZeroP,dis,method)
+  if(x$dis==1){
     cat("Method: Unconditional NPMLE method by Norris and Pollock 1996, 1998,","\n")
-    if(results$method=="N-P"){
+    if(x$method=="N-P"){
       cat("        using algorithm by Bonhing and Schon 2005:", "\n\n")
-    }else if(results$method=="W-L"){
+    }else if(x$method=="W-L"){
       cat("        using algorithm by Wang and Lindsay 2005:", "\n\n")
     }else {
       stop ("Error: the method must be either N-P or W-L!")
     }
  
-    cat('        MLE=                               ', results$MLE0,"\n")
+    cat('        MLE=                               ', x$MLE0,"\n")
     cat('        Estimated Poisson mixture components:      ', "\n")
-    cat('        p=                                 ', results$p[1:results$noZeroP],"\n")
-    cat('        pi=                                ', results$pi[1:results$noZeroP],"\n\n")
+    cat('        p=                                 ', x$p[1:x$noZeroP],"\n")
+    cat('        pi=                                ', x$pi[1:x$noZeroP],"\n\n")
   }
 }

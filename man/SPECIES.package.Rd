@@ -8,13 +8,7 @@
 (1) jackknife estimator by Burnham and Overton 1978, 1979; (2) lower-bound estimator by Chao 1984; (3) coverage-base estimators ACE, ACE-1 by Chao and Lee 1992; (4) coverage-duplication estimator from Poisson-Gamma model by Chao and Bunge 2002; (5) unconditional nonparametric maximum likelihood estimator by Norris and Pollock 1996, 1998; (6) penalized nonparametric maximum likelihood estimator by Wang and Lindsay 2005; and (7) Poisson-compound Gamma model with smooth nonparametric maximum likelihood estimation by Wang 2010.
 }
 \details{
-\tabular{ll}{
-Package: \tab SPECIES\cr
-Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2011-1-22\cr
-License: \tab GPL-2\cr
-}
+
 functions: chao1984, ChaoBunge, ChaoLee1992, jackknife, pcg ,pnpmle, unpmle;
 data: butterfly, cottontail,EST, insect, microbial, traffic
 }
