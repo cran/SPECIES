@@ -5,3 +5,4 @@ export(ChaoBunge,chao1984,pnpmle,ChaoLee1992, jackknife, unpmle,pcg)
 S3method(print,pnpmleClass)
 S3method(print,unpmleClass)
 S3method(print,pcgClass)
+

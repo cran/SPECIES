@@ -410,14 +410,14 @@ DOUBLE PRECISION FUNCTION untrunPden(k,mu)
   !       Input :  k  --- argument  ( integer, >=0 )
   !                mu --- mean Parameter  ( q > 0 )
   !    
-  !       Routine called: lgamma for log gamma function
+  !       Routine called: lgam for log gamma function
   !       ==========================================
 
   IMPLICIT NONE
   DOUBLE PRECISION mu
-  DOUBLE PRECISION lgamma
+  DOUBLE PRECISION lgam
   INTEGER k
-  untrunPden=EXP(-mu+k*LOG(mu)-lgamma((k+1)*1.D0))
+  untrunPden=EXP(-mu+k*LOG(mu)-lgam((k+1)*1.D0))
   RETURN
 END FUNCTION untrunPden
 
@@ -500,14 +500,14 @@ DOUBLE PRECISION FUNCTION Pden(k,mu)
   !       Input :  k  --- argument  ( integer, >=0 )
   !                mu --- mean Parameter  ( q > 0 )
   !    
-  !       Routine called: lgamma for log gamma function
+  !       Routine called: lgam for log gamma function
   !       ==========================================
 
   DOUBLE PRECISION mu
-  DOUBLE PRECISION lgamma
+  DOUBLE PRECISION lgam
   INTEGER k
 
-  Pden=EXP(-mu+k*LOG(mu)-lgamma((k+1)*1D0))/(1D0-EXP(-mu))
+  Pden=EXP(-mu+k*LOG(mu)-lgam((k+1)*1D0))/(1D0-EXP(-mu))
   RETURN
 END FUNCTION Pden
 
@@ -520,19 +520,19 @@ DOUBLE PRECISION  FUNCTION BETA(p,q)
   !       Input :  p  --- Parameter  ( p > 0 )
   !                q  --- Parameter  ( q > 0 )
   !    
-  !       function called: lgamma for computing ‚(x)
+  !       function called: lgam for computing ‚(x)
   !       ==========================================
   IMPLICIT NONE
 
-  DOUBLE PRECISION p,q,lgamma
-  beta=EXP(lgamma(p)+lgamma(q)-lgamma(p+q))
+  DOUBLE PRECISION p,q,lgam
+  beta=EXP(lgam(p)+lgam(q)-lgam(p+q))
 
 END FUNCTION BETA
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!      
 
  
-DOUBLE PRECISION FUNCTION lgamma(X)
+DOUBLE PRECISION FUNCTION lgam(X)
 
   !----------------------------------------------------------------------
   !     ==================================================    
@@ -541,7 +541,7 @@ DOUBLE PRECISION FUNCTION lgamma(X)
   !     1) W. J. Cody and K. E. Hillstrom, 'Chebyshev Approximations for
   !     the Natural Logarithm of the Gamma Function,' Math. Comp. 21,
   !     1967, pp. 198-203.
-  !     2) K. E. Hillstrom, ANL/AMD Program ANLC366S, DGAMMA/LGAMMA, May,
+  !     2) K. E. Hillstrom, ANL/AMD Program ANLC366S, May,
   !     1969.
   !     3) Hart, Et. Al., Computer Approximations, Wiley and sons, New
   !     York, 1968.
@@ -670,7 +670,7 @@ DOUBLE PRECISION FUNCTION lgamma(X)
      RES = XINF
   END IF
 
-  LGAMMA = RES
+  lgam = RES
   RETURN
 
-END FUNCTION lgamma 
+END FUNCTION lgam 

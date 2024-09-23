@@ -108,6 +108,7 @@ SUBROUTINE PCGone(n,t,MLE,a_model,alpha,alphaK,p,pi,theta_threshold,noZeroP)
   a_model=alpha(1)
 
   predict=predict*0.D0
+  max_predict=0.D0
   k=1
   test=1
   DO WHILE (k<=alphaK)
@@ -434,7 +435,7 @@ SUBROUTINE ENPMLE(n,p,pi,noZeroP,t,test,Etol,Gtol,gap,gamma2,theta_threshold)
      theta_0=0
      CALL NPMLEpen(boot,p,pi,noZeroP,t,test,Etol,Gtol,gap,gamma2)
      theta_0=SUM(1/(EXP(p(1:noZeroP))-1)*pi(1:nozeroP))    
-     theta_0=0.5*theta_0+0.5*thetaOld	
+     theta_0=0.5*theta_0+0.5*thetaOld
      gamma2=1/(theta_0)
 
      IF(gamma2<0) THEN
@@ -513,6 +514,7 @@ SUBROUTINE EMScon_theta(n,p,pi,noZeroP,Etol,a,t,gamma2)
            lambda0=p(i)+1.D-3
            lambda1=p(i)
            ite2=1
+           sum_b=0.0D0
            DO WHILE(ABS(lambda1-lambda0)>0.00000000001 .AND. ite2<2000)
               sum_a=0.0D0
               sum_b=0.0D0

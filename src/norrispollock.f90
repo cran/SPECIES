@@ -64,7 +64,7 @@ SUBROUTINE unpmle(n,t,MLE,p,pi,noZeroP)
   IMPLICIT NONE
   INTEGER noZeroP,t,bigIte,i
   DOUBLE PRECISION  likeEnd,likeStart,p(10),pi(10),n(50),n1(50),MLE
-  DOUBLE PRECISION  like,tempprob,lgamma,n00, untrunPmix
+  DOUBLE PRECISION  like,tempprob,lgam,n00, untrunPmix
 
   !! n contains the observed data
   !! n1 contains estimated n0 (first element) and n
@@ -105,7 +105,7 @@ SUBROUTINE unpmle(n,t,MLE,p,pi,noZeroP)
         END IF
      END DO
 
-     like=like+lgamma(SUM(n1(2:(t+1)))+n00+1)-lgamma(n00+1)-lgamma(SUM(n1(2:(t+1)))+1)
+     like=like+lgam(SUM(n1(2:(t+1)))+n00+1)-lgam(n00+1)-lgam(SUM(n1(2:(t+1)))+1)
      likeEnd=like
      !print*,'likeEnd=',likeEnd,'MLE=',sum(n1)
      IF(like>likeStart) THEN

@@ -1,6 +1,6 @@
-b06628cc3a7f519dbab645b527d07c65 *DESCRIPTION
-bca09dc2c5b2d42bbe21098258b0b7d1 *NAMESPACE
-7801c8d89e2d198b4e2b339bca641f55 *NEWS.md
+949ee3333a1712b3cdacd6648ee11e5a *DESCRIPTION
+b3d688ed0a569cfdf5bc8acfcb2f4fc5 *NAMESPACE
+ece35fadd9d22bb94894f5951931f1d2 *NEWS.md
 d4d089a5e4811e8b46a5f940a12c733f *R/ChaoBunge.R
 fd2d0fd71a8a6add0c7e4cddb18d25a5 *R/ChaoLee1992.R
 3d8cbe0d374405f4fe1b88587d6878cf *R/chao1984.R
@@ -29,8 +29,8 @@ cc124e0cb4cbe07b856af485c390397f *man/jackknife.Rd
 42edbe6e5bf1acf41e39d0bf7b71a4d7 *man/pnpmle.Rd
 ef144cfac4ed103df30c61816bc78b04 *man/traffic.Rd
 5aaaad734727da3583427ed420edeac5 *man/unpmle.Rd
-452ed24bb7f7cc5defa3d4e2d7eb1709 *src/PPCG.f90
+5dd265560760a53cb4dd69285b14449e *src/PPCG.f90
 8fddd80d2c29025b1947d87a0eca795f *src/WLunpmle.f90
-f1344dca00dc329f3d28433d92081771 *src/norrispollock.f90
+6a01166e7114ee9f6f9777479dfb07ee *src/norrispollock.f90
 d9cf67617299478460e0713c4f0557f7 *src/pnpmle.f90
-3570f9aa1a50e7f9af2b8f44e2789684 *src/shared.f90
+fd1a9807c43ba98fa1c2ab4c87cedc46 *src/shared.f90

@@ -1,5 +1,5 @@
 
-CHANGES IN VERSION 1.1
+CHANGES IN VERSION 1.2
 --------------------------
 
-   o Included import statements of commonly used stat functions
+   o corrected a few warning message for uninitalized variables in fortran code, and lgamma function.
